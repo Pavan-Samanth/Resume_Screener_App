@@ -43,8 +43,11 @@ def rank_resumes(job_desc, resumes):
 st.set_page_config(page_title="Batch Resume Screener", layout="wide")
 st.title("Batch Resume Screening with AI")
 
+job_description_file = st.file_uploader("Upload Multiple Resumes", type=["pdf", "docx"])
+# Input
 uploaded_files = st.file_uploader("Upload Multiple Resumes", type=["pdf", "docx"], accept_multiple_files=True)
-job_description = st.text_area("Paste the Job Description")
+
+job_description = extract_text(job_description_file)
 
 if uploaded_files and job_description:
     if not os.path.exists("temp_resumes"):
