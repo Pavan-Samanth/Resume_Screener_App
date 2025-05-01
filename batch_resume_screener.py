@@ -43,7 +43,7 @@ def rank_resumes(job_desc, resumes):
 st.set_page_config(page_title="Batch Resume Screener", layout="wide")
 st.title("Batch Resume Screening with AI")
 
-job_description_file = st.file_uploader("Upload Multiple Resumes", type=["pdf", "docx"])
+job_description_file = st.file_uploader("Upload A Job Description", type=["pdf", "docx"])
 # Input
 uploaded_files = st.file_uploader("Upload Multiple Resumes", type=["pdf", "docx"], accept_multiple_files=True)
 
