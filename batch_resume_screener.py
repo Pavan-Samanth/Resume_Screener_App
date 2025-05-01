@@ -61,7 +61,7 @@ if uploaded_files and job_description:
 
         top_matches = rank_resumes(job_description, resume_data)
 
-    st.subheader("🏆 Top 5 Resume Matches")
+    st.subheader("Top 5 Resume Matches")
     if top_matches:
         df = pd.DataFrame(
             [{
@@ -80,7 +80,7 @@ if uploaded_files and job_description:
         all_text = " ".join([text for _, text, _ in resume_data])
         wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
 
-        st.subheader("📊 WordCloud of Resume Content")
+        st.subheader("WordCloud of Resume Content")
         fig, ax = plt.subplots(figsize=(10, 5))
         ax.imshow(wordcloud, interpolation='bilinear')
         ax.axis('off')
