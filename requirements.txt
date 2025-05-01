@@ -1,0 +1,7 @@
+streamlit
+sentence-transformers
+python-docx
+PyMuPDF
+wordcloud
+matplotlib
+pandas
