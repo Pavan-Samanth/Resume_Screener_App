@@ -47,9 +47,10 @@ job_description_file = st.file_uploader("Upload Multiple Resumes", type=["pdf", 
 # Input
 uploaded_files = st.file_uploader("Upload Multiple Resumes", type=["pdf", "docx"], accept_multiple_files=True)
 
-job_description = extract_text(job_description_file)
 
-if uploaded_files and job_description:
+
+if uploaded_files and job_description_file:
+    job_description = extract_text(job_description_file)
     if not os.path.exists("temp_resumes"):
         os.mkdir("temp_resumes")
 
